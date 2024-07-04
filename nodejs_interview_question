@@ -1,0 +1,52 @@
+Sure, here are 50 basic-level Node.js interview questions to help you prepare:
+
+What is Node.js?
+What are the main features of Node.js?
+What is the difference between Node.js and traditional server-side programming?
+Explain the concept of event-driven programming in Node.js.
+What is the event loop in Node.js?
+How does Node.js handle asynchronous I/O operations?
+What is the role of the require function in Node.js?
+What are modules in Node.js?
+What is npm?
+How do you install a package using npm?
+What is the package.json file?
+How do you create a new Node.js project?
+Explain the purpose of the package-lock.json file.
+How do you update npm to the latest version?
+What is a callback function in Node.js?
+Explain the concept of callback hell.
+What are Promises in Node.js?
+How do you create a Promise in Node.js?
+What is async/await in Node.js?
+How do you handle errors in Node.js?
+What is the fs module in Node.js?
+How do you read a file in Node.js?
+How do you write to a file in Node.js?
+What is the http module in Node.js?
+How do you create a simple HTTP server in Node.js?
+What is the path module in Node.js?
+How do you join two paths in Node.js?
+What is the os module in Node.js?
+How do you get the operating system's default directory for temporary files in Node.js?
+What is the process object in Node.js?
+How do you get the current working directory in Node.js?
+What are streams in Node.js?
+What are the types of streams in Node.js?
+How do you create a readable stream in Node.js?
+What is the eventEmitter in Node.js?
+How do you create and emit events in Node.js?
+What is middleware in Express.js?
+What is routing in Express.js?
+How do you define a route in Express.js?
+How do you handle POST requests in Express.js?
+What is the body-parser middleware in Express.js?
+How do you serve static files in Express.js?
+What is CORS and how do you enable it in Node.js?
+How do you handle JSON data in Node.js?
+What is a RESTful API?
+How do you create a RESTful API in Node.js?
+What is MongoDB and how is it used with Node.js?
+How do you connect to a MongoDB database in Node.js?
+What is Mongoose in Node.js?
+How do you define a schema in Mongoose?
