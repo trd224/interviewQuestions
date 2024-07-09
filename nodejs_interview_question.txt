@@ -50,3 +50,58 @@ What is MongoDB and how is it used with Node.js?
 How do you connect to a MongoDB database in Node.js?
 What is Mongoose in Node.js?
 How do you define a schema in Mongoose?
+
+--------------------------------------------
+
+Sure! Here are 50 intermediate-level Node.js and Express interview questions:
+
+What is the purpose of package.json in a Node.js project?
+How do you create a new Express.js application?
+Explain the middleware concept in Express.js.
+How can you handle errors in Express.js?
+What is the difference between app.get and app.use in Express?
+How do you set up a route in Express?
+What is the role of the next function in Express middleware?
+How do you serve static files in Express?
+What are the different HTTP methods supported by Express?
+Explain the concept of routing parameters in Express.
+How do you handle form data in Express?
+What are the differences between res.send and res.json in Express?
+How can you manage different environments (development, production) in a Node.js app?
+What is CORS and how do you enable it in Express?
+How do you implement authentication in an Express application?
+What is the purpose of nodemon?
+Explain the use of process.env in a Node.js application.
+What is the difference between require and import in Node.js?
+How do you connect a Node.js application to a MongoDB database?
+What are Promises and how do they work in Node.js?
+Explain the concept of async/await in Node.js.
+What is the EventEmitter in Node.js?
+How do you handle file uploads in Express?
+What is the purpose of the body-parser middleware?
+Explain the express.Router class and its usage.
+What are the main differences between Express.js and Koa.js?
+How do you implement session management in Express?
+What is a stream in Node.js?
+How do you handle file downloads in Express?
+What is the purpose of the crypto module in Node.js?
+How do you perform input validation in an Express application?
+What is the difference between fs.readFile and fs.createReadStream?
+Explain the concept of middleware chaining in Express.
+How do you structure a large Express application?
+What is the purpose of the helmet middleware in Express?
+How do you handle cookies in Express?
+What is the purpose of the morgan middleware?
+How do you perform logging in a Node.js application?
+What is the purpose of the cluster module in Node.js?
+How do you handle concurrency in Node.js?
+Explain the difference between synchronous and asynchronous code in Node.js.
+What is the purpose of the dotenv package?
+How do you implement a rate limiter in an Express application?
+What is the purpose of the cors middleware?
+How do you test an Express application?
+What is the purpose of module.exports in Node.js?
+How do you manage dependencies in a Node.js project?
+Explain the concept of a RESTful API.
+How do you deploy a Node.js application?
+What are some common security best practices for Node.js applications?
