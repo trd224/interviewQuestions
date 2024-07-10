@@ -239,3 +239,58 @@ How do you implement internationalization (i18n) in Angular?
 Explain the purpose of Angular Elements.
 What are Angular Schematics?
 What is Ivy Renderer in Angular?
+
+---------------------------------------------------------------------------
+
+Sure! Here are 50 advanced-level Angular interview questions to help you prepare:
+
+Explain the Angular lifecycle hooks and their sequence.
+What is Angular Ivy, and what are its advantages?
+How do you optimize an Angular application for performance?
+What is the difference between ViewChild and ContentChild?
+How do you implement lazy loading in Angular?
+Explain Angular dependency injection and hierarchical injectors.
+What is Angular Universal, and how does server-side rendering (SSR) work in Angular?
+How can you create a custom directive in Angular?
+What is the difference between a service and a factory in Angular?
+Explain the difference between Angular modules and JavaScript modules.
+What are Angular pipes, and how can you create a custom pipe?
+How do you handle forms in Angular, and what is the difference between reactive forms and template-driven forms?
+Explain Angular Change Detection and its strategies.
+What is the purpose of NgZone in Angular?
+How do you manage state in an Angular application?
+What is the Angular Router, and how do you configure it?
+Explain how to implement route guards in Angular.
+What are Angular animations, and how do you implement them?
+How do you create a shared module in Angular, and why would you use it?
+What is the purpose of the Angular CLI, and what are some common CLI commands?
+How do you handle error management in Angular applications?
+Explain how Angular handles HTTP requests and responses.
+What is an Angular Service Worker, and how do you set it up?
+Describe how to implement a feature module in Angular.
+What are Angular resolvers, and how do they work?
+How do you implement internationalization (i18n) in Angular?
+What is the purpose of the @HostListener and @HostBinding decorators?
+Explain the role of the Angular compiler and its different phases.
+How do you manage different environments in an Angular application?
+What is Angular Material, and how do you integrate it into an Angular project?
+Describe how to use Observables and Promises in Angular.
+How do you implement a dynamic component in Angular?
+What are the benefits of using Angular over other frameworks?
+How do you handle user authentication and authorization in Angular?
+What is the purpose of Angular zones, and how do they affect performance?
+Explain the concept of tree-shaking in Angular.
+How do you handle component communication in Angular?
+What is the purpose of the async pipe, and how does it work?
+Describe the Angular Renderer2 service and its use cases.
+How do you handle application state with NgRx in Angular?
+What is the Angular AOT (Ahead-of-Time) compilation, and how does it differ from JIT (Just-in-Time) compilation?
+Explain how to use Angular schematics.
+How do you implement progressive web apps (PWA) with Angular?
+What is Angular Flex Layout, and how do you use it?
+Describe how to create and use Angular libraries.
+How do you ensure the security of an Angular application?
+What are the different types of data binding in Angular?
+Explain the concept of Angular zones and how they affect change detection.
+What is the purpose of the @Injectable decorator in Angular?
+How do you use the Angular testing utilities for unit and integration testing?
