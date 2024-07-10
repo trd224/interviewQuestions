@@ -294,3 +294,60 @@ What are the different types of data binding in Angular?
 Explain the concept of Angular zones and how they affect change detection.
 What is the purpose of the @Injectable decorator in Angular?
 How do you use the Angular testing utilities for unit and integration testing?
+
+------------------------------------------------------------------
+
+Concepts and Architecture
+
+Explain the concept of dependency injection in Angular and its benefits.
+Describe the different types of providers (eager, lazy, etc.) and their use cases.
+Discuss the change detection mechanism in Angular and strategies for optimizing performance.
+Explain the difference between Ahead-of-Time (AOT) and Just-in-Time (JIT) compilation in Angular.
+How would you implement lazy loading of modules in a large Angular application?
+Describe the router lifecycle hooks and how they can be used to manage data fetching and component initialization.
+Explain the concept of zones in Angular and their role in asynchronous programming.
+How would you handle routing errors and unauthorized access in an Angular application?
+
+Components and Directives
+
+Differentiate between structural directives and attribute directives in Angular.
+Explain how to create custom directives and provide examples of their use cases.
+Describe strategies for managing component state complexity using techniques like NgRx or behavior subjects.
+How can you implement content projection and transclusion in Angular components?
+Discuss best practices for component communication using services, event emitters, or RxJS.
+Explain how to create reusable UI components using techniques like ng-content and @Input/@Output decorators.
+How would you approach unit testing components with complex logic and external dependencies?
+
+Forms and Data Management
+
+Explain the concept of reactive forms and template-driven forms in Angular.
+Describe the advantages and disadvantages of each form approach.
+How would you implement form validation and error handling in Angular forms?
+Discuss strategies for handling asynchronous form submissions and displaying loading indicators.
+Explain how to use form builders to simplify reactive form creation in Angular.
+How can you implement form groups and form arrays to handle nested data structures?
+Describe techniques for optimizing form performance in large Angular applications.
+Testing and Debugging
+
+Explain the importance of unit testing and end-to-end testing in Angular development.
+Describe the different testing frameworks available for Angular (e.g., Karma, Jasmine) and their features.
+How would you approach debugging performance issues in a production Angular application?
+Explain techniques for writing effective unit tests that cover component logic and interactions.
+Discuss strategies for mocking external dependencies like services and APIs during testing.
+How can you implement end-to-end testing using tools like Protractor or Cypress?
+
+Advanced Topics
+
+Explain how to create custom pipes in Angular and provide examples of their use cases.
+Describe the benefits of using Angular Universal for server-side rendering (SSR).
+How can you implement server-side communication using techniques like HttpClient or WebSockets?
+Discuss strategies for optimizing SEO (Search Engine Optimization) in Angular applications.
+Explain the concept of Ivy, the new rendering engine introduced in Angular versions 9 and above.
+How would you approach performance optimization for large Angular applications with many components?
+Discuss best practices for implementing accessibility features in Angular applications.
+
+Bonus: Scenario-Based Questions
+
+You're building a complex data visualization dashboard with many interactive charts. How would you design the components and handle data updates efficiently in Angular?
+The application you're working on experiences slow loading times on mobile devices. Describe your approach to identify performance bottlenecks and optimize the user experience.
+Imagine you're building a real-time chat application using Angular. How would you handle user authentication, message synchronization, and presence updates?
