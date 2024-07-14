@@ -108,3 +108,91 @@ Security
 Helmet: Helps secure Express/Node.js apps by setting various HTTP headers.
 BCrypt: Library to help hash passwords.
 Rate-limiter-flexible: Flexible rate limiting for Node.js.
+
+------------------------------
+
+Apollo-server - A community-driven, flexible GraphQL server.
+Async - Utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.
+Axios - Promise based HTTP client for the browser and node.js.
+Babel - JavaScript compiler.
+Bcryptjs - Optimized bcrypt in JavaScript with zero dependencies.
+Bluebird - Full featured promise library with unmatched performance.
+Body-parser - Node.js body parsing middleware.
+Chai - BDD / TDD assertion library for node and the browser that can be paired with any testing framework.
+Chalk - Terminal string styling done right.
+Cheerio - Fast, flexible, and lean implementation of core jQuery designed specifically for the server.
+Commander - The complete solution for node.js command-line interfaces.
+Concurrently - Run multiple commands concurrently.
+Cors - Node.js CORS middleware.
+Dotenv - Loads environment variables from .env for nodejs projects.
+Ejs - Embedded JavaScript templates.
+Eslint - The pluggable linting utility for JavaScript and JSX.
+Express - Fast, unopinionated, minimalist web framework for Node.js.
+Express-session - Simple session middleware for Express.
+Fs-extra - Essential utilities for the filesystem.
+GraphQL - A query language for your API.
+Helmet - Help secure Express apps with various HTTP headers.
+Http-errors - Create HTTP errors for Express, Koa, Connect, etc.
+Jest - Delightful JavaScript Testing.
+Json-server - Get a full fake REST API with zero coding in less than 30 seconds.
+Knex - A SQL query builder that is flexible, portable, and fun to use.
+Lodash - A modern JavaScript utility library delivering modularity, performance, and extras.
+Moment - Parse, validate, manipulate, and display dates and times in JavaScript.
+Mocha - Simple, flexible, fun JavaScript test framework for Node.js & the browser.
+Morgan - HTTP request logger middleware for node.js.
+Mongoose - Elegant MongoDB object modeling for Node.js.
+Multer - Node.js middleware for handling multipart/form-data.
+Mysql - A pure node.js JavaScript Client implementing the MySQL protocol.
+Nodemailer - Easy as cake e-mail sending from your Node.js applications.
+Nodemon - Utility that will monitor for any changes in your source and automatically restart your server.
+Passport - Simple, unobtrusive authentication for Node.js.
+Pg - PostgreSQL client for node.js.
+Pm2 - Production process manager for Node.js applications.
+Pug - Robust, elegant, feature rich template engine for Node.js.
+Rate-limiter-flexible - Fast and flexible rate limiting for Node.js.
+Redis - Redis client library.
+Request - Simplified HTTP client.
+Sequelize - Easy-to-use multi SQL dialect ORM for Node.js.
+Sharp - High performance Node.js image processing.
+Socket.io - Real-time bidirectional event-based communication.
+Supertest - Super-agent driven library for testing node.js HTTP servers using a fluent API.
+TypeORM - ORM for TypeScript and JavaScript (ES7, ES6, ES5).
+Uuid - Simple, fast generation of RFC4122 UUIDS.
+Winston - A logger for just about everything.
+Webpack - A bundler for JavaScript and friends.
+jsonwebtoken - JSON Web Token implementation (RFC 7519).
+
+---------------------------------------------
+
+Sure, here are 30 important Node.js packages without the installation commands:
+
+Express - Web framework for Node.js.
+Mongoose - MongoDB object modeling for Node.js.
+Async - Utility module for working with asynchronous JavaScript.
+Lodash - Utility library delivering modularity, performance, and extras.
+Moment - Parse, validate, manipulate, and display dates and times.
+Axios - Promise-based HTTP client for the browser and Node.js.
+Passport - Simple, unobtrusive authentication for Node.js.
+jsonwebtoken - JSON Web Token implementation.
+bcrypt - Library to help hash passwords.
+nodemailer - Easy as cake e-mail sending from your Node.js applications.
+dotenv - Loads environment variables from a .env file into process.env.
+multer - Middleware for handling multipart/form-data, used for uploading files.
+cors - Middleware to enable CORS with various options.
+mocha - Feature-rich JavaScript test framework running on Node.js.
+chai - BDD/TDD assertion library for Node.js and the browser.
+sinon - Standalone test spies, stubs, and mocks.
+Jest - Delightful JavaScript Testing Framework.
+supertest - HTTP assertions made easy via superagent.
+sequelize - Promise-based Node.js ORM for PostgreSQL, MySQL, MariaDB, SQLite, and Microsoft SQL Server.
+pg - PostgreSQL client for Node.js.
+redis - Redis client library.
+socket.io - Enables real-time bidirectional event-based communication.
+pm2 - Production process manager for Node.js applications with a built-in load balancer.
+winston - A versatile logging library.
+chalk - Terminal string styling done right.
+yargs - Command-line argument parsing.
+express-validator - Express middleware for validation and sanitization.
+body-parser - Node.js body parsing middleware.
+ejs - Embedded JavaScript templating.
+pug - Robust, elegant, feature-rich template engine for Node.js.
