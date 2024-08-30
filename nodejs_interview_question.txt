@@ -51,6 +51,9 @@ How do you connect to a MongoDB database in Node.js?
 What is Mongoose in Node.js?
 How do you define a schema in Mongoose?
 
+https://chatgpt.com/c/95cbe980-2024-412d-85ec-ec9ac8102114
+https://chatgpt.com/share/1a05e9f2-929f-42ee-b25a-6c139916e5bb
+
 --------------------------------------------
 
 Sure! Here are 50 intermediate-level Node.js and Express interview questions:
