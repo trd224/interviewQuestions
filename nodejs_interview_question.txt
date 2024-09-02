@@ -109,6 +109,8 @@ Explain the concept of a RESTful API.
 How do you deploy a Node.js application?
 What are some common security best practices for Node.js applications?
 
+https://chatgpt.com/c/6e5e8615-a84e-4f4e-abb3-25dc2c685d4a
+
 ----------------------------------------------------------------------------------
 
 Sure, here's a list of 50 advanced-level Node.js Express interview questions:
