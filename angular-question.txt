@@ -28,6 +28,9 @@ What is a canActivate guard in Angular?
 What is a canDeactivate guard in Angular?
 What is a canActivateChild guard in Angular?
 What is a canLoad guard in Angular?
+differance between signals and regular property in angular
+
+
 --------------------
 What is a provider in Angular?
 What is a factory provider in Angular?
