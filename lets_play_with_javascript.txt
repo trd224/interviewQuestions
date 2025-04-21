@@ -377,21 +377,86 @@ function test() {
 }
 console.log(test());
 --------------------------------
+let x = 1;
+if (function f() {}) {
+  x += typeof f;
+}
+console.log(x);
 ------------------------------
+let a = (function() {
+  return typeof arguments;
+})();
+console.log(a);
 ------------------------------
+let foo = {
+  bar: function () {
+    return this;
+  }
+};
+
+let fn = foo.bar;
+console.log(fn());
+console.log(foo.bar());
 --------------------------------
+(function(){
+  var a = b = 5;
+})();
+console.log(typeof b);
 ------------------------------
+console.log(0.1 + 0.2 === 0.3);
 ------------------------------
+let x = [typeof x, typeof y];
+console.log(x);
+var y = 10;
 --------------------------------
+console.log('2' > '12');
 ------------------------------
+let x = 3;
+let y = x++ + ++x + x;
+console.log(y);
 ------------------------------
+console.log((function f(){}) instanceof Function);
+console.log(typeof f);
 --------------------------------
+console.log('5' - - '3');
 ------------------------------
+let x = (function() {
+  return typeof arguments[0];
+})();
+console.log(x);
 ------------------------------
+let x = 10;
+function foo() {
+  console.log(x);
+  var x = 20;
+}
+foo();
 --------------------------------
+let a = {};
+let b = { key: 'b' };
+let c = { key: 'c' };
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]);
 ------------------------------
+(function(){
+  let a = b = 3;
+})();
+console.log(b);
+console.log(typeof a);
 ------------------------------
+(function(){
+  console.log(typeof this);
+}).call(1);
 --------------------------------
+let count = 0;
+(function immediate() {
+  if (count === 0) {
+    let count = 1;
+    console.log(count);
+  }
+  console.log(count);
+})();s
 ------------------------------
 ------------------------------
 --------------------------------
