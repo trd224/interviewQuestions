@@ -458,25 +458,79 @@ let count = 0;
   console.log(count);
 })();s
 ------------------------------
+let a = 1;
+function test() {
+  console.log(a);
+  let a = 2;
+}
+test();
 ------------------------------
+console.log(typeof undefined == typeof NULL);
 --------------------------------
+console.log([,,,].length);
 ------------------------------
+console.log((true + false) > 1);
 ------------------------------
+let obj = { a: 1 };
+Object.freeze(obj);
+obj.a = 2;
+console.log(obj.a);
 --------------------------------
+console.log(parseInt('1e2'));
 ------------------------------
+console.log(!!'false' == !!'true');
 ------------------------------
+console.log(Math.max() < Math.min());
 --------------------------------
+let x = NaN;
+console.log(x !== x);
 ------------------------------
+(function() {
+  let x = (y = 5);
+})();
+console.log(typeof y);
 ------------------------------
+let obj = {};
+console.log(obj.toString === Object.prototype.toString);
 --------------------------------
+console.log(Number.MIN_VALUE > 0);
 ------------------------------
+let a = [1,2,3];
+delete a[1];
+console.log(a.length);
+console.log(a[1]);
 ------------------------------
+console.log('hello' instanceof String);
+console.log(new String('hello') instanceof String);
 --------------------------------
+function foo() {
+  return
+  {
+    bar: 10
+  };
+}
+console.log(typeof foo());
 ------------------------------
+console.log("b" + "a" + +"a" + "a");
 ------------------------------
+const obj = {
+  get name() {
+    return 'chat';
+  }
+};
+obj.name = 'gpt';
+console.log(obj.name);
 --------------------------------
+let set = new Set([1, 2, 2, 3, 4]);
+console.log([...set]);
 ------------------------------
+console.log(0.1 + 0.2);
+console.log((0.1 + 0.2) == 0.3);
 ------------------------------
+let arr = [1, 2, 3];
+arr[10] = 11;
+console.log(arr.length);
+console.log(arr[9]);
 --------------------------------
 ------------------------------
 ------------------------------
