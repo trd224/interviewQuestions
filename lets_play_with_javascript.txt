@@ -65,11 +65,16 @@
 
     [1, 2].forEach(alert);
 </script> -->
+
 12
 <!-- <script>
     alert("Hello")
 
     [1, 2].forEach(alert);
+</script> -->
+<!-- <script>
+   
+    [1, 2].forEach(alert());
 </script> -->
 13
 <!-- <script>
