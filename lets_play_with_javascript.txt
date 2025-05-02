@@ -209,6 +209,16 @@
     console.log(date2 >= date1); //output is always true
     
     </script> -->
+ <!-- <script>
+    const date2 = {};
+    const date1 = {};
+    
+    
+    console.log(date1 > date2); //output is always false
+    console.log(date2 > date1); //output is always false
+    
+    </script> -->
+
 
     <!-- <script>
         console.log(.4 - .3); //output will be 0.10000000000000003
