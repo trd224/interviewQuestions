@@ -432,6 +432,11 @@ let x = [typeof x, typeof y];
 console.log(x);
 var y = 10;
 --------------------------------
+
+let x = [typeof y, typeof y];
+console.log(x);
+var y = 10;
+--------------------------------
 console.log('2' > '12');
 ------------------------------
 let x = 3;
