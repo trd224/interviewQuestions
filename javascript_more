@@ -1,0 +1,68 @@
+let p = new Promise("notAFunction");
+-----------------
+let big1 = BigInt(123456789012345678901234567890);
+let big2 = BigInt(123456789012345678901234567890n);
+
+console.log(big1); // ?
+console.log(big2); // ?
+--------------
+let re = new RegExp("abc");
+console.log(re.test("123abc456")); // ?
+--------------
+let re = new RegExp("abc", "i");
+console.log(re.test("123Abc456")); // ?
+-------------
+let x = new Object(123);
+console.log(typeof x); // ?
+-------------
+let set = new Set([1, 1, 2]);
+console.log(set.size); // ?
+-----------------
+console.log(typeof new Date());  // ?
+console.log(typeof Date());      // ?
+----------------
+let error = new TypeError("Wrong type");
+console.log(error.name); // ?
+-----------------------
+console.log(Symbol("id") == Symbol("id")); // ?
+console.log(Symbol("id") === Symbol("id")); // ?
+
+-----------------
+const result1 = JSON.parse('{"a":1}');
+const result2 = JSON.parse("{'a':1}");
+
+console.log(result1);
+console.log(result2);
+---------------------
+try {
+    JSON.parse("{a:1}");
+  } catch (e) {
+    console.log(e instanceof SyntaxError); // ?
+  }
+
+  -------------------
+  let a = Number([1, 2]);
+console.log(a); // ?
+
+------------------
+console.log(typeof new Boolean(false)); // ?
+--------------
+let obj = Object(null);
+console.log(obj); // ?
+------------------
+let f = Function("x", "y", "return x * y;");
+console.log(f(2, 3)); // ?
+
+-------------------
+console.log(Array(3));    // ?
+console.log(Array.of(3)); // ?
+------------------
+console.log(Date());        // ?
+console.log(new Date());    // ?
+-------------------
+console.log(Boolean([])); // ?
+--------------------
+let str = String({ a: 1 });
+console.log(str); // ?
+--------------------
+console.log(Number([,])); // ?
