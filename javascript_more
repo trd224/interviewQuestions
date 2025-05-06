@@ -66,3 +66,164 @@ let str = String({ a: 1 });
 console.log(str); // ?
 --------------------
 console.log(Number([,])); // ?
+----------------------
+let n = new Number(0);
+
+if (n) {
+  console.log("Truthy");
+} else {
+  console.log("Falsy");
+}
+----------------------------
+console.log(Number([]) + Number({})); // ?
+-------------------------------
+console.log(String([1, 2, [3, 4]])); // ?
+----------------------------
+let obj = new Object(String);
+console.log(typeof obj);     // ?
+console.log(typeof obj());   // ?
+----------------------------
+let arr = new Array(3);
+arr[0] = 1;
+console.log(arr.map(x => 2 * x)); // ?
+----------------------------
+let f = Function("return arguments[0] + arguments[1];");
+console.log(f(1, 2)); // ?
+-------------------------------
+console.log(new Function("return typeof this")()); // ?
+----------------------------
+let arr = Array(2).fill(0).map(() => Math.random());
+console.log(arr.length, arr[0] !== arr[1]); // ?
+----------------------------
+Function("let x = ;"); // ?
+----------------------------
+console.log(new Date("invalid-date").getTime()); // ?
+-------------------------------
+let re = new RegExp("^\\d+$");
+console.log(re.test("123abc")); // ?
+----------------------------
+try {
+  throw new RangeError("Out of range");
+} catch (e) {
+  console.log(e instanceof Error);       // ?
+  console.log(e instanceof RangeError);  // ?
+}
+----------------------------
+try {
+    eval("let x = ;");
+  } catch (e) {
+    console.log(e.name); // ?
+  }
+----------------------------
+const a = Symbol("id");
+const b = Symbol("id");
+console.log(a === b); // ?
+-------------------------------
+const big = BigInt("12345678901234567890");
+console.log(typeof big); // ?
+----------------------------
+const set = new Set([{ a: 1 }, { a: 1 }]);
+console.log(set.size); // ?
+----------------------------
+const map = new Map();
+map.set("1", "string");
+map.set(1, "number");
+console.log(map.size); // ?
+----------------------------
+const p = new Promise((resolve, reject) => {
+  throw new Error("Fail");
+});
+p.catch(e => console.log(e.message)); // ?
+-------------------------------
+console.log(Number([]) === Number(false)); // ?
+----------------------------
+console.log(String(undefined + null)); // ?
+----------------------------
+const a = new Boolean(false);
+console.log(Boolean(a) === a); // ?
+----------------------------
+const x = new Object(null);
+console.log(x.constructor === Object); // ?
+-------------------------------
+console.log(Array(3).toString()); // ?
+----------------------------
+console.log(new Function("return typeof arguments")()); // ?
+----------------------------
+const a = {};
+const b = {};
+const map = new Map([[a, "A"], [b, "B"]]);
+console.log(map.get({})); // ?
+----------------------------
+console.log(new Date("2023-13-01")); // ?
+-------------------------------
+const p = new Promise((_, reject) => reject(new Error("fail")));
+p.catch(e => { throw e }).catch(console.log); // ?
+----------------------------
+let sym = Symbol("desc");
+console.log(sym + ""); // ?
+----------------------------
+let s1 = Symbol.for("foo");
+let s2 = Symbol.for("foo");
+console.log(s1 === s2); // ?
+----------------------------
+let a = BigInt(1);
+let b = 1;
+console.log(a == b);  // ?
+console.log(a === b); // ?
+-------------------------------
+let x = Object.assign([], {0: "a", 1: "b", length: 3});
+console.log(x); // ?
+----------------------------
+const arr = Array.of.call(null, 1, 2, 3);
+console.log(arr); // ?
+----------------------------
+Array.from("foo");             // ["f", "o", "o"]
+Array.from([1, 2, 3]);         // [1, 2, 3]
+Array.from({ length: 3 });     // [undefined, undefined, undefined]
+Array.from({ length: 3 }, (_, i) => i); // [0, 1, 2]
+----------------------------
+console.log(typeof new Error().stack); // ?
+-------------------------------
+const date = new Date("1970-01-01T00:00:00Z");
+console.log(date.getTime()); // ?
+----------------------------
+const error = new TypeError("Oops");
+console.log(error instanceof Error);     // ?
+console.log(error instanceof TypeError); // ?
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
+----------------------------
+-------------------------------
+----------------------------
+----------------------------
