@@ -404,3 +404,153 @@ console.log("end");
 const sym = Symbol("id");
 const obj = { [sym]: 123, normal: 456 };
 for (let key in obj) console.log(key); // ?
+----------------------
+const func = () => {
+  console.log(arguments);
+};
+func(1, 2, 3); // ?
+--------------------------
+const arr = [];
+arr[0] = arr;
+console.log(arr.toString()); // ?
+---------------------
+with ({}){
+  eval("var x = 10");
+}
+console.log(x); // ?
+---------------------
+function Parent() {}
+Parent.prototype.sayHi = () => "Hi";
+const obj = new Parent();
+obj.sayHi = () => "Hello";
+delete obj.sayHi;
+console.log(obj.sayHi()); // ?
+----------------------
+console.log([] == ![]); // ?
+---------------------
+const a = {};
+Object.setPrototypeOf(a, Array.prototype);
+console.log(a instanceof Array); // ?
+---------------------
+setTimeout(() => console.log("timeout"));
+Promise.resolve().then(() => console.log("promise"));
+console.log("sync"); // ?
+------------------
+function foo(a, a) {
+    return a;
+  }
+  console.log(foo(1, 2)); // ?
+
+----------------------
+const a = { x: { y: 1 } };
+const b = { ...a };
+b.x.y = 2;
+console.log(a.x.y); // ?
+----------------------
+var name = "Global";
+const obj = {
+  name: "Obj",
+  getName: function () {
+    return this.name;
+  },
+};
+const get = obj.getName;
+console.log(get()); // ?
+----------------------
+function f(a, b = 1, c) {}
+console.log(f.length); // ?
+--------------------
+const arr = [,,];
+console.log(0 in arr); // ?
+console.log(arr.length); // ?
+---------------------------
+const obj = {};
+Object.defineProperty(obj, "hidden", {
+  value: 42,
+  enumerable: false
+});
+for (let key in obj) {
+  console.log(key); // ?
+}
+console.log(Object.getOwnPropertyNames(obj))
+---------------------------
+async function fn() {
+  return 1;
+}
+console.log(fn()); // ?
+---------------------------
+Deep Flatten an Array (with arbitrary nesting)
+const input = [1, [2, [3, [4]], 5]];
+// Output: [1, 2, 3, 4, 5]
+---------------------------
+Implement a groupBy function
+groupBy([{age: 23}, {age: 24}, {age: 23}], obj => obj.age);
+// Output: { 23: [{age: 23}, {age: 23}], 24: [{age: 24}] }
+---------------------------
+Clone an object deeply, including functions and circular references.
+---------------------------
+Implement a debounce function with cancellation support.
+---------------------------
+Create a memoize function that supports multiple arguments and handles object-type arguments.
+---------------------------
+Fix the bug in this closure-based counter:
+---------------------------
+Fix the bug in this closure-based counter:
+for (var i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+---------------------------
+What does this print and why?
+const obj = {
+  name: "Test",
+  getName: () => this.name
+};
+console.log(obj.getName());
+---------------------------
+Write a function that returns another function to cache API results.
+---------------------------
+Implement a function retry(fn, retries) that retries an async function if it fails.
+---------------------------
+Write an async function to limit concurrency (e.g., only 3 async calls run at once).
+---------------------------
+Create your own Promise.allSettled polyfill.
+---------------------------
+Convert this callback-based function into one that returns a Promise:
+function loadData(callback) {
+  setTimeout(() => callback("data loaded"), 1000);
+}
+---------------------------
+Create a custom implementation of the new operator.
+---------------------------
+Implement Object.create manually.
+---------------------------
+What’s wrong with this inheritance pattern? Fix it.
+function Animal(name) { this.name = name; }
+Animal.prototype.speak = function() { return this.name + ' makes a noise'; }
+
+function Dog(name) { Animal.call(this, name); }
+Dog.prototype = Animal.prototype;
+---------------------------
+Explain and fix the bug:
+[1, 2, 3].map(parseInt);
+---------------------------
+Why does this return false?
+NaN === NaN
+---------------------------
+lain this result:
+console.log([] + []);         // ""
+console.log([] + {});         // "[object Object]"
+console.log({} + []);         // 0 or "[object Object]" (depending on context)
+---------------------------
+Write a compose function that works with both sync and async functions.
+---------------------------
+Given a large array of numbers, find the top 10 highest values efficiently.
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
+---------------------------
