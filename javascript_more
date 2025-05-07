@@ -332,13 +332,75 @@ const obj = {
 };
 console.log(obj == 42); // ?
 -------------------------------
+const obj = Object.freeze({ a: { b: 2 } });
+obj.a.b = 3;
+console.log(obj.a.b); // ?
 ----------------------------
+let a = { n: 1 };
+let b = a;
+a.x = a = { n: 2 };
+console.log(a.x); // ?
+console.log(b.x); // ?
 ----------------------------
+function foo() {
+    console.log(a);
+    var a = 10;
+    function a() {}
+  }
+  foo(); // ?
 ----------------------------
+const obj = {};
+Object.defineProperty(obj, 'x', {
+  get() { return 10; },
+  enumerable: true
+});
+console.log(Object.keys(obj)); // ?
 -------------------------------
+const thenable = {
+  then(resolve, reject) {
+    resolve("resolved");
+  }
+};
+Promise.resolve(thenable).then(console.log); // ?
 ----------------------------
+const payload = JSON.parse('{"__proto__":{"x":123}}');
+console.log({}.x); // ?
 ----------------------------
+class A {
+  static { console.log("A"); }
+}
+class B extends A {
+  static { console.log("B"); }
+}
+new B(); // ?
 ----------------------------
+const obj = { a: undefined };
+console.log(JSON.stringify(obj)); // ?
 -------------------------------
+function f() {}
+f.constructor = "modified";
+console.log(f.constructor === Function); // ?
 ----------------------------
+console.log(+[]);   // ?
+console.log(+{});   // ?
 ----------------------------
+const A = { a: 1 };
+const B = Object.create(A);
+const C = Object.create(B);
+console.log(C.a); // ?
+-------------------------
+console.log(NaN === NaN);       // ?
+console.log(Object.is(NaN, NaN)); // ?
+-------------------------
+console.log("start");
+async function foo() {
+  console.log("inside foo");
+  await null;
+  console.log("after await");
+}
+foo();
+console.log("end");
+-----------------------
+const sym = Symbol("id");
+const obj = { [sym]: 123, normal: 456 };
+for (let key in obj) console.log(key); // ?
