@@ -1,0 +1,31 @@
+/////////////////bind
+
+const user = {
+  name: "Alice",
+  greet() {
+    console.log("Hello, " + this.name);
+  }
+};
+
+const button = document.querySelector("button");
+
+// Without bind: `this` is not `user`, so it won't work
+button.addEventListener("click", user.greet); // `this` will be the button
+
+// With bind: `this` is always `user`
+button.addEventListener("click", user.greet.bind(user));
+
+--------------------------------
+
+  const person = {
+  name: "Alice",
+  greet: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+const greet = person.greet;
+greet(); // undefined, because `this` is not bound to `person`
+
+const boundGreet = person.greet.bind(person);
+boundGreet(); // Hello, my name is Alice
