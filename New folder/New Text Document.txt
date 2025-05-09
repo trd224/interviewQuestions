@@ -1,0 +1,33 @@
+-------------------------------------
+JHALAWAR AKLERA GUPS GARADA
+
+select * from office_master_mapping  where office_master_new_id is  null and office_old_id not in (43,2974,1615,1614,1285,1028,975,947,946,945,834,706,603,281,273,197,188,38,2982,2981,2980,2978,2977,2972,2967,2964,2963,2960,2955,2954,2948,2949,2951,1925,1927,1926,1878,1827,1825,1823,1813,1812,1810,1801,1799,1794,1758,1757,1756,1755,1751,1752,1753,1688,1717,1741,1743,1738)
+
+select * from office_master_new where office_name like '%AKLERA%'
+
+select max(office_master_new_id) from office_master_mapping
+
+update [rajattendancenew].[dbo].[office_master_mapping] set office_master_new_id = 42737 where office_old_id = 57
+
+insert into office_master_new values(42737,0,'JHALAWAR AKLERA GUPS GARADA' ,3000696,31)
+
+
+
+
+
+
+select * from office_master_mapping  where office_master_new_id is  null and office_old_id not in (43,2974,1615,1614,1285,1028,975,947,946,945,834,706,603,281,273,197,188,38,2982,2981,2980,2978,2977,2972,2967,2964,2963,2960,2955,2954,2948,2949,2951,1925,1927,1926,1878,1827,1825,1823,1813,1812,1810,1801,1799,1794,1758,1757,1756,1755,1751,1752,1753,1688,1717,1741,1743,1738,  80, 180, 184, 187,189,192,193,194, 195,196,199,200,201,202,203,204,206,207,208,210,211,212,215,220,225,228,271,276,313,330,334,347,353,372,440,455,458,461,468,474,479,482,491,510,512,518,521,529,536,540,545,555,556,560,577,580,592,621,638,641,673,675,689,700,821,823,827,829,837,838,843,849,854,870,873,890)
+
+
+select * from office_master_new where office_name like '%AMBEDKAR HOSTEL, RADAWAS%'
+
+select max(office_master_new_id) from office_master_mapping
+
+update [rajattendancenew].[dbo].[office_master_mapping] set office_master_new_id = 43443 where office_old_id = 888
+
+insert into office_master_new values(43443,0,'Government Dr. B.R. Ambedkar hostel, Ladpura' ,3000465,24)
+
+
+
+
+

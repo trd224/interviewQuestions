@@ -1,0 +1,17 @@
+declare @tmptable as table(old_desig_id int ,designation_name varchar(100))
+
+insert into @tmptable select DesigID,Desigdesciprion from [ATTENDANCE].[dbo].[DesignationMaster]
+
+declare @count int,@Desigdesciprion varchar(100),@DesigID int
+
+ while (@count>0)
+   begin
+        set @Desigdesciprion=(select top 1 designation_name from @tmptable)
+		set @DesigID=(select old_desig_id from @tmptable where designation_name=@Desigdesciprion)
+
+		update [rajattendancenew].[dbo].[designation_master] set old_desig_id=@DesigID where designation_name=@Desigdesciprion
+
+		delete from @tmptable where designation_name=@Desigdesciprion
+		set @count=@count-1
+
+		end

@@ -1,0 +1,34 @@
+https://rajattendancetest.rajasthan.gov.in/UIDAttendance/faceauth/registerOrgAdmin // 500 error
+
+{
+    "aadhaarId": "444071982631474",
+    "displayName": "GHANSHYAM GOYAL/SA(JD)/DOITC",
+    "employeeNumber": "RJNA201328025843",
+    "mobile": "9116001536",
+    "mailOfficial": "GHANSHYAMG.DOIT@RAJASTHAN.GOV.IN",
+    "designation": "SA(JOINT DIRECTOR)",
+    "department": "INFORMATION TECHNOLOGY COMMUNICATION (DOIT)",
+    "userType": "GOVT",
+    "ssoid": "ghanshyamg.doit",
+    "officeId": 52416,
+    "disttId": 12,
+    "isDhq": 0,
+    "deptId": 3000325
+}
+
+https://rajattendancetest.rajasthan.gov.in/UIDAttendance/faceauth/uploadexcelforemployee   //400 error
+
+[
+    {
+        "ssoId": "ravi525",
+        "firstName": "ravi",
+        "lastName": "singh",
+        "employeeNumber": 845,
+        "deptId": 2,
+        "empType": "NONGOVTEMP",
+        "mobile": 9854251524,
+        "mailOfficial": "ravi@gmail.com",
+        "designationId": 88850346,
+        "isGovtEmp": 0
+    }
+]

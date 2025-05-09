@@ -1,0 +1,36 @@
+create migrate employee page in raj attendance for employee module
+increapt aadhar id for bulk employee upload for payload
+implemented field validation for new attendance report
+implemented pagination of new attendance report third depth
+implemented reset functionality for whole app forms
+issue fixed district id is coming null in payload for DHJ
+Add new API for finding office name for DDLs
+implement search box reset functionality
+updated office name on add office admin screen.
+resolved issue department id coming null in payload when working as department admin
+resolved issue district ID is coming null in payload when getting offices for DDL on register DHQ admin screen
+resolved issue office Name should be null in DDL when District changed in District DDL on register DHQ admin screen
+resolved issue DHQ Admin-> Employee Admin -> Employee -> Export excel data is not download and continuous loading Not found error
+resolved issue All->Employee Report ->Employee Report ,Office -> Employee, Office report is coming blank
+resolved issue Department , DHQ admin, Office admin -> Employee report -> Holiday -> Holiday dropdown -> 2024 year missing dropdown
+resolved issue in holiday -> Data will come of current year of every account
+resolved issue DHQ Admin-> Employee Admin-> Employee Attendance list ->This are find error and duplicate api name
+Department Admin Employee Admin DHQ Admin OnClick-> Alert pop-up Is showing (Session time out) Api - getListDHQOfficeAdmin
+Department Admin Employee Admin Office Admin Api -> GetAllDesig-> Twice time api calling
+Superadmin Employee Admin Holiday Add Holiday -> Will be correction in Add and remove functionality
+Superadmin Employee Report Office Api -> findOfficeDetails -> api call is multiple time
+create Query Executor page
+issue resolved Query builder -> On Execute query -> OTP pop-up is not coming
+issue resolved Query Builder -> Found error on set method -> Error popup coming -> Can't execute multiple query
+issue resolved Query builder -> delete, drop or turncate -> alert popup and message not coming
+OTP Verification concent message corrections
+
+
+
+
+
+
+
+
+
+

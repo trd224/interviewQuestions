@@ -1,0 +1,20 @@
+
+field validation for old attendance report
+field validation for new attendance report
+need to fix UI responsive
+need to test office admin for production data and need to resolve bug for old attendance report
+need to imlement employee admin for production data and need to resolve bug for old attendance report
+pagination of new attendance report third depth
+field valodation for whole app
+exception hendling for whole app
+repor table sorter
+check pagination for whole app
+reset functionality for whole app forms
+in create course master data tab need to resolve add common session tab bug
+need to obtimize code for better performance
+need to update related icons for whole app
+implement pdf createtion for all reports
+need to resolve horizontal scrollbar for some reports
+unit testing
+need to fast api response
+

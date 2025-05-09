@@ -1,0 +1,38 @@
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+io.on('connection', (socket) => {
+    console.log('A user connected:', socket.id);
+
+    // Join a room
+    socket.on('join-room', (room) => {
+        socket.join(room);
+        console.log(`User ${socket.id} joined room: ${room}`);
+    });
+
+    // Handle sending message to a room
+    socket.on('send-group-message', ({ room, message }) => {
+        console.log(`Message to room ${room}: ${message}`);
+        // Broadcast message to everyone in the room, excluding the sender
+        socket.to(room).emit('receive-group-message', message);
+    });
+
+    // Leave room
+    socket.on('leave-room', (room) => {
+        socket.leave(room);
+        console.log(`User ${socket.id} left room: ${room}`);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('A user disconnected:', socket.id);
+    });
+});
+
+server.listen(3000, () => {
+    console.log('Server listening on port 3000');
+});

@@ -1,0 +1,288 @@
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ApiService } from 'src/app/_shared/_services/api.service';
+import { API_ENDPOINTS } from 'src/app/_shared/_config/const';
+import { AuthService } from 'src/app/_shared/_services/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
+import { ChatService } from '../../_services/chat.service';
+import { environment } from 'src/environments/environment';
+import { HttpParams } from '@angular/common/http';
+import { debounceTime, Subscription, timestamp } from 'rxjs';
+
+@Component({
+  selector: 'app-side-nav',
+  templateUrl: './side-nav.component.html',
+  styleUrls: ['./side-nav.component.scss']
+})
+export class SideNavComponent implements OnInit, OnChanges {
+
+  users!: any[];
+  sender: string = '';
+  receiver: string = '';
+  groupId: string = '';
+  groups!: any[];
+  FILE_URL = environment.fileUrl;
+  @Input() currentUser!: any;
+  @Input() group!: any;
+  onlineStatusSubscription!: Subscription;
+  hasInitialLoadCompleted = false;  // Flag to track initial user load
+
+
+  constructor(
+    private apiService: ApiService, 
+    private authService: AuthService, 
+    private router: Router,
+    private route: ActivatedRoute,
+    public dialog: MatDialog,
+    private chatService: ChatService
+  ){
+   
+  }
+
+  userMap = new Map();
+
+  ngOnInit(): void {
+    this.chatService.connectionError$.subscribe(() => {
+      this.setAllUsersOffline();
+    });
+
+    
+    
+    //  // Listen for reconnections with debounce to avoid multiple calls
+    //  this.reconnectionSubscription = this.chatService.serverReconnect()
+    //  .pipe(debounceTime(1000))  // Waits 1 second to limit reconnection events
+    //  .subscribe(() => {
+    //   this.initializeStatusAndMessageListeners()
+    //  });
+
+    this.route.queryParams.subscribe((params) => {
+      if(params['receiver']){
+        this.receiver = params['receiver'];
+        this.groupId = "";
+      }
+      else if(params['group']){
+        this.groupId = params['group'];
+        this.receiver = ""
+      }
+    })
+   
+    this.getGroups();
+    this.getUsers("1111"); 
+    
+  }
+
+ 
+ 
+  ngOnChanges(changes: SimpleChanges) {
+   
+
+  }
+
+  setAllUsersOffline() {
+    this.users.forEach((user) => {
+      user.isOnline = false;
+    });
+  }
+
+  // setOnlineStatusWithUser(){
+    
+  //     this.chatService.receiveUserOnlineStatus().subscribe((data: any) => {
+  //       console.log(data);
+  //       this.users.forEach(user => {
+  //           if(data.onlineUsersArray.includes(user._id)){
+  //             user.isOnline = true
+  //           }
+  //           else{
+  //             user.isOnline = false
+  //           }
+  //       })
+  //       console.log("UUUUUUUUU", this.users);
+  //    });
+    
+    
+  // }
+
+  // setMessagesWithUser(){
+  //   this.chatService.receiveMessages().subscribe({
+  //     next: (msg: any) => {
+  //       const messageObj = msg;
+  //       this.users.forEach(user => {
+  //           if(user._id == messageObj.receiverObj._id || user._id == messageObj.senderObj._id){
+  //             if(user.lastChat == null){
+  //               const lastChat = {
+  //                 message: '', timestamp:'',
+  //               }
+  //               lastChat.message = messageObj.message;
+  //               lastChat.timestamp = messageObj.timestamp;
+  //               user.lastChat = lastChat
+  //             }
+  //             else{
+  //               user.lastChat.message = messageObj.message;
+  //               user.lastChat.timestamp = messageObj.timestamp;
+  //             }
+              
+              
+  //           }
+  //           if(user._id == messageObj.senderObj._id && this.receiver !== messageObj.senderObj._id){
+  //             if(!messageObj.seenByReceiver){
+  //               user.unseenMessageCount += 1;
+  //             }
+  //             user.unseenMessageCount
+  //           }
+  //       })
+
+  //     },
+  //     error: (error) => {
+
+  //     }
+  //   })
+  // }
+
+  setUserMap(users: any[]) {
+    this.userMap.clear();
+    users.forEach(user => {
+      this.userMap.set(user._id, user);
+    });
+  }
+
+  initializeStatusAndMessageListeners(par:any) {
+    this.onlineStatusSubscription = this.chatService.receiveUserOnlineStatus()
+    //.pipe(debounceTime(1000))
+    .subscribe((data: any) => {
+      console.log(par)
+      console.log("JJJJ", data);
+      this.updateOnlineStatus(data.onlineUsersArray);
+
+      // If users haven't been loaded initially or a major change, refresh all users
+      if (!this.hasInitialLoadCompleted) {
+        this.getUsers("2222");
+        this.hasInitialLoadCompleted = true;
+      }
+    
+    });
+
+    this.chatService.receiveMessages().subscribe({
+      next: (msg: any) => {
+        console.log("HHH");
+        this.updateMessages(msg);
+      },
+      error: (error) => {
+        console.error("Message error:", error);
+      }
+    });
+  }
+
+  updateOnlineStatus(onlineUsersArray: string[]) {
+    this.userMap.forEach(user => {
+      user.isOnline = onlineUsersArray.includes(user._id);
+    });
+  }
+
+  updateMessages(messageObj: any) {
+    const user = this.userMap.get(messageObj.receiverObj._id) || this.userMap.get(messageObj.senderObj._id);
+    if (!user) return;
+
+    user.lastChat = user.lastChat || { message: '', timestamp: '' };
+    user.lastChat.message = messageObj.message;
+    user.lastChat.timestamp = messageObj.timestamp;
+
+    if (user._id === messageObj.senderObj._id && this.receiver !== messageObj.senderObj._id) {
+      if (!messageObj.seenByReceiver) {
+        user.unseenMessageCount = (user.unseenMessageCount || 0) + 1;
+      }
+    }
+  }
+
+  getUsers(par: any) {
+    const queryParams = new HttpParams()
+      .set('isCurrentUser', 'false')
+      .set('lastChat', 'true')
+      .set('unseenMessageCount', 'true');
+
+    this.apiService.get(API_ENDPOINTS.user.base, queryParams).subscribe((res: any) => {
+      this.users = res;
+      this.setUserMap(this.users);
+      setTimeout(() => {
+        this.initializeStatusAndMessageListeners(par);
+      }, 1000);
+    });
+  }
+
+  // getUsers(){
+
+  //   const queryParams = new HttpParams()
+  //     .set('isCurrentUser', 'false')
+  //     .set('lastChat', 'true')
+  //     .set('unseenMessageCount', 'true');
+
+  //     this.apiService.get(API_ENDPOINTS.user.base, queryParams).subscribe((res) => {
+  //       this.users = res;
+  //       setTimeout(() => {
+  //         this.setOnlineStatusWithUser();
+  //         this.setMessagesWithUser();
+  //       },1000)
+       
+  //   });
+  // }
+
+  getGroups(){
+    this.apiService.get(API_ENDPOINTS.chat.group.currentUser.byCurrentUserId).subscribe((res) => {
+      this.groups = res;
+
+    });
+  }
+
+  goToChat(receiver: any) {
+    this.router.navigate(['/users/chat'], {
+      queryParams: { receiver: receiver._id },
+    });
+  }
+
+  goToGroupChat(group: any){
+    this.router.navigate(['/users/chat'], {
+      queryParams: { group: group._id },
+    });
+  }
+
+  createGroup(): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '900px',
+      data: { 
+        users:  this.users,
+        currentUser: this.sender
+       } 
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.chatService.createGroup(result).subscribe((res:any) => {
+          this.getGroups();
+          const groupId = res.newGroupId;
+          this.chatService.groupNotification(groupId)
+        })
+      }
+      
+    });
+  }
+
+  goToProfile(){
+    this.router.navigate([`/users/profile/${this.currentUser._id}`])
+  }
+
+  logout(){
+    this.authService.logout()?.subscribe(res => {
+      if(res == null){
+        this.router.navigate(["/"]);
+        this.chatService.disconnectSocket(); // Ensure the previous socket connection is closed
+      }
+    });
+  }
+
+  changeUser(selectedUser: any) {
+    this.receiver = selectedUser._id;  
+    selectedUser.unseenMessageCount = 0;  
+  }
+
+  
+}

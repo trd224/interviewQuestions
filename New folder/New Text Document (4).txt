@@ -1,0 +1,13 @@
+
+migration page
+export report
+
+report downloaded when data not showing on table
+3rd depth filter date and time data - done
+invalid date - done
+export report doesnt download when wrong data put on filter dropdown - done 
+resolved bug for employee
+update date formate to download excel report for employee
+resolved bug for employee paresent days report pagination
+
+change domail name on staging

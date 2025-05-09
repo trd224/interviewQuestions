@@ -1,0 +1,22 @@
+https://rajattendancetest.rajasthan.gov.in/UIDAttendance/faceauth/orgRegistration
+
+{
+    "officeMasterId": 52413,
+    "address": "jhalana dungri",
+    "disttId": 12,
+    "tehsilId": 443,
+    "patwarId": 10,
+    "areaType": 1,
+    "blockId": null,
+    "gramPanchayatId": null,
+    "villageId": null,
+    "cityId": 194,
+    "wardId": 6160,
+    "pincode": "302004",
+    "isOfficeDhq": 0,
+    "officeOpenTiming": "10:00",
+    "officeclosingTiming": "19:00",
+    "latitude": "26.8663",
+    "longitude": "75.8181",
+    "deptId": 3000325
+}

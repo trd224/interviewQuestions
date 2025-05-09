@@ -1,0 +1,51 @@
+--- Aug 2024 (13 Aug to 31 Aug) ---
+
+Project - Raj Attendance
+Module - Employee Module, Education module
+Task - 1. Resolved bug of old attandance filter when user select dropdown of district and office and immediat unselect
+       2. Resolved bug of old attandance filter when user select dropdown of designation  and immediat unselect
+       3. Resolved bug of old attandance filter when user select dropdown of  employee and immediat unselect
+       4. Resolved bug of old attandance filter when user select dropdown of  department and immediat unselect
+       5. check all employee report pages and its functionality for employee module in raj attendance
+       6. fixed dropdown issue on student-holiday page for employee module in raj attendance
+       
+
+--- Sep 2024 (1 Sep to 30 Sep) ---
+
+Project - Raj Attendance
+Module - Employee Module, Education module
+Task - 1. update the functionality of date range(disable future date) for raj attendance in employee module
+       2. implemented wrong value validation in filter dropdown  for raj attendance in employee module
+       3. change api for district dropdown, implemented new api  for raj attendance in employee module
+       4. resolve bug for department dropdown filter  for  raj attendance in employee module
+       5. resolve bug for top search box  for  raj attendance in employeemodule
+       6. resolved filter bug for super admin, department admin and DHQ admin  for  raj attendance in employeemodule
+       7. resolved bug for employee attendance last depth report date and time issue in excel report
+       8. update date formate to download excel report for employee
+       9. change domain name on staging
+
+
+
+--- Oct 2024 (1 Oct to 31 Oct) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 1. update configuration for staging build
+       2. optimized bedget(assets) size for staging build for raj attendance
+       3. update code structure of export report for employee old attendance 
+       4. check employee new attendance report and found new bug on 3rd depth pagination and given effert to resolve it
+       5. found new bug for old employee report and given effert to resolve it on raj attendance employee module
+       6. found some new UI bug and given effert to resolve them in raj attendance employee module
+       7. give effert to resolve rediredtion from "172.22.33.6/UIDAttendance/login" to "rajattendancetest.rajasthan.gov.in/UIDAttendance/login" check possibility from frontend side
+       8. test all functionality is working or not properly on staging and production for rajattendance 
+       9. understood the way to deploy raj attendance app on production and staging
+
+--- Nov 2024 (1 Nov to 12 Nov) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 1. resolved bug for employee 
+       2. Update date key for present days report 
+       3. resolved bug for employee present days report pagination for employee modle
+       4. change pagination for employee present days report
+       5. check all employee admin pages and its functionality for employee module in raj attendance

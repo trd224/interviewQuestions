@@ -1,0 +1,54 @@
+--- Nov 2024 (13 Nov to 30 Nov) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 
+1. Create migrate employee page in Raj Attendance for the employee module.
+2. Encrypt Aadhar ID for bulk employee upload for payload.
+3. Implemented field validation for the new attendance report.
+4. Implemented pagination of the new attendance report third depth.
+5. Implemented reset functionality for whole app forms.
+6. Issue fixed: District ID is coming null in payload for DHJ.
+
+--- Dec 2024 (1 Dec to 31 Dec) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task -  
+1. Add new API for finding office name for DDLs.
+2. Implement search box reset functionality.
+3. Updated office name on add office admin screen.
+4. Resolved issue: Department ID coming null in payload when working as department admin.
+5. Resolved issue: District ID is coming null in payload when getting offices for DDL on register DHQ admin screen.
+6. Resolved issue: Office name should be null in DDL when the district is changed in District DDL on register DHQ admin screen.
+7. Resolved issue: DHQ Admin -> Employee Admin -> Employee -> Export Excel data is not downloading and continuously loading with "Not found" error.
+8. Resolved issue: All -> Employee Report -> Employee Report, Office -> Employee, Office report is coming blank.
+9. Resolved issue: Department, DHQ admin, Office admin -> Employee report -> Holiday -> Holiday dropdown -> 2024 year missing in dropdown.
+10. Resolved issue in holiday -> Data will come from the current year of every account.
+
+--- Jan 2025 (1 Jan to 31 Jan) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task -  
+1. Resolved issue: DHQ Admin -> Employee Admin -> Employee Attendance list -> This error is found and duplicate API name.
+2. Resolved issue: Department Admin, Employee Admin, DHQ Admin OnClick -> Alert pop-up is showing (Session timeout). API - getListDHQOfficeAdmin.
+3. Resolved issue: Department Admin, Employee Admin, Office Admin API -> GetAllDesig -> API is called twice.
+4. Resolved issue: Superadmin -> Employee Admin -> Holiday -> Add Holiday -> Correction in Add and Remove functionality.
+5. Superadmin -> Employee Report -> Office API -> findOfficeDetails -> API call is made multiple times.
+6. Created Query Executor page.
+7. Issue resolved: Query builder -> On Execute query -> OTP pop-up is not appearing.
+8. Issue resolved: Query Builder -> Found error on set method -> Error popup appearing -> Can't execute multiple queries.
+9. Issue resolved: Query builder -> Delete, Drop, or Truncate -> Alert popup and message not appearing.
+10. OTP Verification consent message corrections.
+
+--- Feb 2025 (1 Feb to 12 Feb) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 
+1. Implement Ace Editor for SQL query.
+2. Implement all types of result screens for SQL query executor.
+3. Implement query execution when selecting a specific query like SQL query builder.
+4. Implement different APIs for different types of queries.
+5. Error handling when input wrong query on query executor.

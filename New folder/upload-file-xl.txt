@@ -1,0 +1,29 @@
+
+https://rajattendancetest.rajasthan.gov.in/UIDAttendance/faceauth/uploadexcelforemployee
+
+[
+    {
+        "ssoId": "ravi",
+        "firstName": "ravi",
+        "lastName": "ravi",
+        "employeeNumber": 1254,
+        "deptId": 2,
+        "empType": "NONGOVTEMP",
+        "mobile": 9854521215,
+        "mailOfficial": "ravi@gmail.com",
+        "designationId": 88850346,
+        "isGovtEmp": 0
+    },
+    {
+        "ssoId": "raju",
+        "firstName": "raju",
+        "lastName": "raju",
+        "employeeNumber": 5485,
+        "deptId": 2,
+        "empType": "NONGOVTEMP",
+        "mobile": 7012458784,
+        "mailOfficial": "raju@gmail.com",
+        "designationId": 88850346,
+        "isGovtEmp": 0
+    }
+]

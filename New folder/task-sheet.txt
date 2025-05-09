@@ -1,0 +1,48 @@
+--- May 2024 (13 May to 31 May) ---
+
+Project - Document verification
+Module - Driving License, Voter ID, Ration Card, Aadhar Card, Jan Aadhar, Token Generation Authentication
+Task - 1. Understood Driving License verification wrapper's API's services
+       2. Understood of Voter Id Card verification wrapper's API's services
+       3. Understood of Ration Card verification wrapper's API's services
+       4. Understood of Aadhar Card verification wrapper's API's services
+       5. Understood of Jan Aadhar Card verification wrapper's API's services
+       6. Understood of Token GenerationAPI's services
+
+--- Jun 2024 (1 Jun to 30 May) ---
+
+Project - Raj Attendance
+Module - Employee Module, Education module
+Task - 1. Check college master edit functionality in eduction module
+       2. Got access and KT of sql database for Raj Attendance 
+       3. Got Super admin KT and understand its scope and functionality in employee module for Raj  Attendance
+       4. Got department admin (employee) KT and understand its scope and functionality in employee module for Raj  Attendance
+       5. give effort to resolve production side 404 error
+       6. Find solution for apache tomcate server configuration error for production for Raj Attandance app
+       7. Created old data nevigation for migration
+       8. Created old data page for migration
+       9. Update concept of old data nevigation for migration, Got KT for Office admin
+
+
+--- July 2024 (1 July to 31 July) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 1. create local setup of raj attendance system repo from azure devops server using team exporer
+       2. Create attendance type widget on dashboard page for office admin and DHQ admin in angular
+       3. Add post api with payload of attendance type widget on dashboard page for office admin and DHQ admin in angular 
+       4. implement data of attendance type widget with api and created dynemic update 
+       5. implement confirmation popup when update authtype on attendance type widget 
+       6. create new page for magnage app and shift and update attendance type widget from dashboad page, create new navigation for old app attendance for office and  DHQ admin
+       7. update folder structue of raj attendance app using best pectice and optimise some file code structure 
+       8. migrate old office data  from old database table to new databse table using sql  for raj attendance 
+       9. create old app attendance page and create its whole functionality with real data
+
+--- Aug 2024 (1 Aug to 12 Aug) ---
+
+Project - Raj Attendance
+Module - Employee Module
+Task - 1. added date filter on old app attandance report and worked on its functionality, resolved office dropdown filter bug
+       2. worked on old app attendance admin (deparment, DHQ, office, employee) functionality from frontend side
+       3. filterout duplicate data form database using sql for old 
+       4. Resolved bug of old attandance filter
