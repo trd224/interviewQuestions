@@ -14,7 +14,68 @@ What is the purpose of the bind(), call(), and apply() methods in JavaScript? Ho
 
 How would you flatten a deeply nested array using JavaScript? Can you provide both iterative and recursive solutions?
 
+const arr = [1,2,[3,4,[5]]];
+function flatten(arr, flattenArray = []){
+  
+  arr.forEach((elem) => {
+    if(Array.isArray(elem)){
+      flatten(elem, flattenArray);
+    } 
+    else{
+      flattenArray.push(elem);
+    }
+  })
+  return flattenArray;
+}
+
+console.log(flatten(arr))
+------------------------------
+const nested = [1, [2, [3, [4, 5], [6,7]]]];
+console.log(nested.flat(Infinity));
+------------------------------
+function flattenIterative(arr) {
+  const stack = [...arr]; // clone input to avoid mutation
+  const result = [];
+
+  while (stack.length) {
+    const next = stack.pop();
+
+    if (Array.isArray(next)) {
+      stack.push(...next); // flatten one level
+    } else {
+      result.push(next);
+    }
+  }
+
+  return result.reverse(); // reverse since we popped from end
+}
+
+// Example
+const nested = [1, [2, [3, [4, 5]]]];
+console.log(flattenIterative(nested)); // [1, 2, 3, 4, 5]
+-------------------------------------
+
 How do you prevent a function from being called more than once in a short period of time (debouncing and throttling)?
+
+let debounceTimer = null;
+let lastInputValue = '';
+
+const debounceDelay = 500;
+
+function handleInput(event) {
+ 
+  lastInputValue = event.target.value;
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(onDebouncedInput, debounceDelay);
+}
+
+function onDebouncedInput() {
+  console.log('Debounced value:', lastInputValue);
+}
+
+// Usage
+document.getElementById('inputField').addEventListener('input', handleInput);
+---------------------
 
 What is the difference between var, let, and const in JavaScript? Can you provide examples where each would be used?
 
