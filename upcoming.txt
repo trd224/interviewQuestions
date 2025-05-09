@@ -1,0 +1,21 @@
+Employee Name: Mohd Rizwan
+Designation: Sr. software engineer
+
+Project:  Raj Attendance
+•	Field validation for new attendance report - done
+•	Need to test office admin for production data and if bug found then  need to resolve bug for old attendance report 
+•	Need to implement employee admin for production data and if bug found then need to resolve bug for old attendance report
+•	Pagination of new attendance report third depth - done
+•	Field validation for whole app
+•	Exception handling for whole app
+•	Report table sorter
+•	Check pagination for whole app
+•	Reset functionality for whole app forms
+•	In create course master data tab need to resolve add common session tab bug
+•	Need to optimize code for better performance
+•	Need to update related icons for whole app
+•	Implement pdf creation for all reports
+•	Need to resolve horizontal scrollbar for some reports
+•	Unit testing
+•	Need to fast api response
+

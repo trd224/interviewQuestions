@@ -1,0 +1,4 @@
+https://gitlabuidtest.rajasthan.gov.in/
+
+username: rizwan.uid
+password: Admin@123

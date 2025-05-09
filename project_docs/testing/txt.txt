@@ -1,0 +1,21 @@
+ip: 172.22.33.6
+pass: D0it&c@123456 
+
+
+testing url: http://172.22.33.6:8080/#/?token=
+
+
+
+
+//---------------------------------------
+
+computer - 172.22.33.6
+user name - VM-WRAJATTN-DB\admin
+
+
+VM IP details:-VM-WRAJATTN-DB01 172.22.33.6
+admin
+Password@1234
+
+
+C:\Users\w10\Documents\new_designation_table
